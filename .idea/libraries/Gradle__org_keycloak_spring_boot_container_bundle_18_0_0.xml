@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.keycloak:spring-boot-container-bundle:18.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.keycloak/spring-boot-container-bundle/18.0.0/594c10e019bf68a135610b249fbe9ad2a518d01e/spring-boot-container-bundle-18.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.keycloak/spring-boot-container-bundle/18.0.0/ad1c2faa5bd0fd138db36664cc8371c6c0d1c743/spring-boot-container-bundle-18.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

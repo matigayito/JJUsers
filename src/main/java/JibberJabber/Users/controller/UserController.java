@@ -3,8 +3,10 @@ package JibberJabber.Users.controller;
 import JibberJabber.Users.model.User;
 import JibberJabber.Users.services.UserService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -15,7 +17,12 @@ public class UserController {
     public UserController(UserService userService) {this.userService = userService;}
 
     @GetMapping
-    List<User> getAll() {return userService.getAllUsers();}
+    List<User> getAll(Principal principal, Model model) {
+        List<User> users = userService.getAllUsers();
+        model.addAttribute("customers", users);
+        model.addAttribute("username", principal.getName());
+        return users;
+    }
 
     @PostMapping
     User save(@RequestBody User newUser) {

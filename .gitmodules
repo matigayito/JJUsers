@@ -1,0 +1,3 @@
+[submodule "JJInfra"]
+	path = JJInfra
+	url = https://github.com/matigayito/JJInfra.git

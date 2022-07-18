@@ -3,13 +3,15 @@ package JibberJabber.Users.controller;
 import JibberJabber.Users.model.User;
 import JibberJabber.Users.services.UserService;
 import org.springframework.stereotype.Controller;
+//import org.springframework.ui.Model;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+//import java.security.Principal;
 import java.security.Principal;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/users")
 public class UserController {
     private final UserService userService;

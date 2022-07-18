@@ -7,19 +7,21 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8000:8080
+      - 8000:8000
     environment:
       DB_USER: sa
       DB_PASSWORD: password
       DB_NAME: compose-db
-      DB_HOST: postgres_db
+      DB_HOST: db
       DB_PORT: 5432
+    depends_on:
+      - db
 
   db:
     container_name: users_postgres_db
     image: postgres:12
     ports:
-          - 5432:5432
+      - 5432:5432
     environment:
       POSTGRES_USER: sa
       POSTGRES_PASSWORD: password

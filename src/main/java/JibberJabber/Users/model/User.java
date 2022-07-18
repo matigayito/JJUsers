@@ -1,12 +1,9 @@
 package JibberJabber.Users.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
-@Entity
+@Entity(name = "myuser")
 public class User {
 
     @GeneratedValue
@@ -14,8 +11,8 @@ public class User {
     private Long id;
     private String username;
     private String password;
-    @ManyToMany
-    private List<User> following;
+    @ElementCollection
+    private List<Long> following;
 
     public User() {}
 
@@ -48,11 +45,11 @@ public class User {
         this.password = password;
     }
 
-    public List<User> getFollowing() {
+    public List<Long> getFollowing() {
         return following;
     }
 
-    public void setFollowing(List<User> following) {
+    public void setFollowing(List<Long> following) {
         this.following = following;
     }
 }
